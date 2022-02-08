@@ -1,7 +1,9 @@
 import "dotenv/config"
-import express, { json } from "express";
+import express from "express";
+import { router } from './routes'
 
 const app = express()
+app.use(router)
 
 app.get('/github', (req, res) => {
     res.redirect(`http://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`)
