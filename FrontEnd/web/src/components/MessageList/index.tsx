@@ -1,6 +1,10 @@
-function MessageList(){
+import styles from './styles.module.scss'
+
+function MessageList() {
     return (
-        <h1>MessageList</h1>
+        <div className={styles.MessageList}>
+            <h1>MessageList</h1>           
+        </div>
     )
 }
 
