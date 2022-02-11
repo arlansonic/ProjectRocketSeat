@@ -1,4 +1,3 @@
-import { VscGithubInverted } from 'react-icons/vsc'
 import styles from './styles.module.scss'
 
 function LoginBox() {
@@ -6,8 +5,7 @@ function LoginBox() {
         <div className={styles.LoginBoxWrapper}>
             <strong>Entre e compartilhe sua mensagem</strong>
             <a href="$" className={styles.singInWithGithub}>
-                <VscGithubInverted size='24'/>
-                Entrar com GitHub 
+                Entrar com GitHub
             </a>
         </div>
     )
