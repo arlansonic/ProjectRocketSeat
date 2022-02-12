@@ -48,15 +48,15 @@ export function AuthProvider(props: AuthProvider) {
         setUser(user)
     }
 
-    function singOut(){
+    function singOut() {
         setUser(null)
         localStorage.removeItem('@dowhile:token')
     }
 
     useEffect(() => {
-        const token = localStorage.getItem('@downline:token')
+        const token = localStorage.getItem('@dowhile:token')
 
-        if(token){
+        if (token) {
 
             api.defaults.headers.common.authorization = `Bearer ${token}`
             api.get<User>('profile').then(res => {
@@ -78,9 +78,10 @@ export function AuthProvider(props: AuthProvider) {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ signInUrl, user, singOut}}>
+        <AuthContext.Provider value={{ signInUrl, user, singOut }}>
             {props.children}
         </AuthContext.Provider>
     )
 }
+
 
